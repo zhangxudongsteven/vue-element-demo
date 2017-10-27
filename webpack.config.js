@@ -58,7 +58,7 @@ module.exports = (options = {}) => ({
         port: 8010,
         proxy: {
             '/api/': {
-                target: 'http://ali-hz-hbase-name-node:12308/',
+                target: 'http://warehouse-api/',
                 changeOrigin: true,
                 pathRewrite: {
                     '^/api': ''

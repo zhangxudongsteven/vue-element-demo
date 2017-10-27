@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Home from './components/home.vue'
 import SaleDetails from './components/details.vue'
 import Reports from './components/reports.vue'
+import Entry from './components/entry.vue'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
             path: '/reports',
             name: 'Reports',
             component: Reports
+        },
+        {
+            path: '/entry',
+            name: 'Entry',
+            component: Entry
         }
     ]
 })

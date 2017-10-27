@@ -3,14 +3,23 @@
         <div>
             <el-form :inline="true" :model="formInline" class="demo-form-inline">
                 <el-form-item label="店铺">
-                    <el-select v-model="formInline.shop" placeholder="全部店铺">
-                        <el-option label="官网" value="CC0006"></el-option>
+                    <el-select v-model="formInline.shop" filterable placeholder="全部店铺">
+                        <el-option
+                          v-for="item in shopList"
+                          :key="item.shop_id"
+                          :label="item.shop_name"
+                          :value="item.shop_id">
+                        </el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item label="产品">
-                    <el-select v-model="formInline.product" placeholder="全部产品">
-                        <el-option label="Tichome标准版音箱 太空黑" value="6940447101059"></el-option>
-                        <el-option label="Tichome标准版音箱 火星红" value="6940447101448"></el-option>
+                    <el-select v-model="formInline.product" filterable placeholder="全部产品">
+                        <el-option
+                          v-for="item in productList"
+                          :key="item.productId"
+                          :label="item.productName"
+                          :value="item.productId">
+                        </el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item label="起始">
@@ -63,13 +72,6 @@ export default {
     },
 
     methods: {
-        myNotice() {
-            this.$notify.info({
-                title: 'Shhh',
-                message: 'Just be patient...',
-                duration: 6000
-            });
-        },
         updateShops() {
             this.$http.get('/api/shops/').then((data, error) => {
                 if (!error) {

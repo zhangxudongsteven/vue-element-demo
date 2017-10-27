@@ -1,9 +1,7 @@
 <template>
     <div>
-        <el-button @click="visible = true">按钮</el-button>
-        <el-dialog v-model="visible" title="Hello world">
-            <p>欢迎使用 Element</p>
-        </el-dialog>
+        <h1>销售统计系统页面：TODO</h1>
+        <h4>此IP为开发环境，正式生产环境将移至 data portal</h4>
     </div>
 </template>
 
