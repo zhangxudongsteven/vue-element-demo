@@ -40,7 +40,7 @@
                         this.reports = items.sort(function (a, b) {
                             return b.value - a.value;
                         })
-                        console.log(this.reports);
+                        // console.log(this.reports);
                     }
                 });
             },
