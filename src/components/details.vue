@@ -117,7 +117,8 @@ export default {
                     var items = JSON.parse(data["bodyText"])["data"];
                     this.orders = items;
                     this.updateItems();
-                    // console.log(items);
+                    this.formInline.shop = null;
+                    this.formInline.product = null;
                 } else {
                     console.log(error);
                 }
