@@ -5,6 +5,7 @@ import Home from './components/home.vue'
 import SaleDetails from './components/details.vue'
 import Reports from './components/reports.vue'
 import Entry from './components/entry.vue'
+import Deal from './components/deal.vue'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
             path: '/entry',
             name: 'Entry',
             component: Entry
+        },
+        {
+            path: '/deal',
+            name: 'Deal',
+            component: Deal
         }
     ]
 })
