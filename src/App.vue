@@ -6,6 +6,7 @@
                 <el-menu-item index="/details">订单详情</el-menu-item>
                 <el-menu-item index="/entry">录入数据</el-menu-item>
                 <el-menu-item index="/reports">每日战报</el-menu-item>
+                <el-menu-item index="/deal">交易管理</el-menu-item>
             </el-menu>
         </div>
         <hr>
