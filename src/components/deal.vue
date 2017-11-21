@@ -220,7 +220,7 @@
                 this.productForm.quantity = 1;
             },
             refreshDeals() {
-                this.$http.get('/api/deals/').then((data, error) => {
+                this.$http.get('/api/deal/all').then((data, error) => {
                     if (!error) {
                         this.deals = JSON.parse(data["bodyText"])["data"];
                         for (let deal of this.deals) {
@@ -238,9 +238,9 @@
                 });
             },
             refreshChannels() {
-                this.$http.get('/api/channels/').then((data, error) => {
+                this.$http.get('/api/channel/all').then((data, error) => {
                     if (!error) {
-                        let items = JSON.parse(data["bodyText"])["data"];
+                        let items = JSON.parse(data["bodyText"]);
                         this.channels = {};
                         for (let item of items) {
                             this.channels[item["channelId"]] = item;
@@ -252,9 +252,9 @@
                 });
             },
             refreshProducts() {
-                this.$http.get('/api/products/').then((data, error) => {
+                this.$http.get('/api/product/all').then((data, error) => {
                     if (!error) {
-                        let items = JSON.parse(data["bodyText"])["data"];
+                        let items = JSON.parse(data["bodyText"]);
                         // console.log(items);
                         this.products = {};
                         for (let item of items) {
