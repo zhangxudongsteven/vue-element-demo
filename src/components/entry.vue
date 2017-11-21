@@ -121,9 +121,9 @@
                 });
             },
             updateProducts() {
-                this.$http.get('/api/products/').then((data, error) => {
+                this.$http.get('/api/product/all').then((data, error) => {
                     if (!error) {
-                        var items = JSON.parse(data["bodyText"])["data"];
+                        var items = JSON.parse(data["bodyText"]);
                         this.productList = [];
                         this.products = {};
                         for (let item of items) {
